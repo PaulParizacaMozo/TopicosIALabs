@@ -1,0 +1,9 @@
+# Ignorar directorio de construcción
+/build/
+
+# Ignorar ejecutables
+*.exe
+*.out
+*.o
+*.a
+
