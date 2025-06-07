@@ -1,4 +1,5 @@
 #include "neurona.hpp"
+#include <omp.h>
 #include <random>
 #include <stdexcept>
 using namespace std;
@@ -71,9 +72,12 @@ void Neurona::calcularEntradaNeta(const vector<double> &entradas) {
     throw invalid_argument("Desajuste entre el numero de entradas y pesos");
   }
   this->entradaNeta = 0.0;
+
+#pragma omp parallel for reduction(+ : entradaNeta)
   for (size_t i = 0; i < pesos.size(); ++i) {
-    this->entradaNeta += pesos[i] * entradas[i];
+    entradaNeta += pesos[i] * entradas[i];
   }
+
   this->entradaNeta += sesgo;
 }
 

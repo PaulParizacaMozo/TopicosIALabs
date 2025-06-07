@@ -5,6 +5,7 @@
 #include <fstream>
 #include <iomanip>
 #include <iostream>
+#include <omp.h>
 #include <stdexcept>
 using namespace std;
 
@@ -54,6 +55,7 @@ void PerceptronMulticapa::retropropagacion(const vector<double> &entradasMuestra
     throw runtime_error("Desajuste en el tamanio de las salidas esperadas y el numero de neuronas en la capa de salida.");
   }
 
+#pragma omp parallel for
   for (int k = 0; k < capaSalida.obtenerNumNeuronas(); ++k) {
     Neurona &neuronaK = capaSalida.neuronas[k];
     if (capaSalida.tipoActivacionCapa == "softmax") {
@@ -69,6 +71,7 @@ void PerceptronMulticapa::retropropagacion(const vector<double> &entradasMuestra
     Capa &capaActualOculta = capas[l];
     Capa &capaSiguiente = capas[l + 1];
 
+#pragma omp parallel for
     for (int j = 0; j < capaActualOculta.obtenerNumNeuronas(); ++j) {
       Neurona &neuronaJ = capaActualOculta.neuronas[j];
       double errorPropagado = 0.0;
@@ -89,6 +92,7 @@ void PerceptronMulticapa::retropropagacion(const vector<double> &entradasMuestra
       throw runtime_error("Desajuste en el tamaño de entrada para la actualizacion de pesos de la capa");
     }
 
+#pragma omp parallel for
     for (int j = 0; j < capas[l].obtenerNumNeuronas(); ++j) { // it sobre cada neurona
       Neurona &neuronaJ = capas[l].neuronas[j];
       for (size_t i = 0; i < neuronaJ.pesos.size(); ++i) { // it sobre cada peso de la neurona
