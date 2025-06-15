@@ -1,0 +1,70 @@
+❯ g++ -fopenmp -O3 -o main main.cpp perceptronMulticapa.cpp capa.cpp neurona.cpp
+❯ ./main
+Cargando datos de entrenamiento...
+Cargadas 10000 muestras de mnist_train.csv
+Cargando datos de prueba...
+Cargadas 10000 muestras de mnist_test.csv
+Dimensiones de entrada[0]: 784
+Dimensiones de salidaEsperada[0]: 10
+Creando la red neuronal...
+Red neuronal creada.
+Iniciando entrenamiento...
+Epoca 1/50 - Perdida (Train): 0.6322 - Precision (Train): 83.5800% - Perdida (Test): 0.4773 - Precision (Test): 85.1800%
+Epoca 2/50 - Perdida (Train): 0.2779 - Precision (Train): 92.0800% - Perdida (Test): 0.2696 - Precision (Test): 92.1300%
+Epoca 3/50 - Perdida (Train): 0.2088 - Precision (Train): 94.0900% - Perdida (Test): 0.2146 - Precision (Test): 93.6000%
+Epoca 4/50 - Perdida (Train): 0.1632 - Precision (Train): 95.2700% - Perdida (Test): 0.2080 - Precision (Test): 93.6900%
+Epoca 5/50 - Perdida (Train): 0.1277 - Precision (Train): 96.4100% - Perdida (Test): 0.2390 - Precision (Test): 92.8200%
+Epoca 6/50 - Perdida (Train): 0.1036 - Precision (Train): 96.7900% - Perdida (Test): 0.2076 - Precision (Test): 93.9400%
+Epoca 7/50 - Perdida (Train): 0.0826 - Precision (Train): 97.6200% - Perdida (Test): 0.1775 - Precision (Test): 94.6500%
+Epoca 8/50 - Perdida (Train): 0.0685 - Precision (Train): 98.0400% - Perdida (Test): 0.1938 - Precision (Test): 94.1900%
+Epoca 9/50 - Perdida (Train): 0.0543 - Precision (Train): 98.5300% - Perdida (Test): 0.1728 - Precision (Test): 95.1800%
+Epoca 10/50 - Perdida (Train): 0.0439 - Precision (Train): 98.8100% - Perdida (Test): 0.1860 - Precision (Test): 94.8300%
+Epoca 11/50 - Perdida (Train): 0.0352 - Precision (Train): 99.0600% - Perdida (Test): 0.1918 - Precision (Test): 94.7900%
+Epoca 12/50 - Perdida (Train): 0.0264 - Precision (Train): 99.4200% - Perdida (Test): 0.1892 - Precision (Test): 95.1200%
+Epoca 13/50 - Perdida (Train): 0.0226 - Precision (Train): 99.4200% - Perdida (Test): 0.1781 - Precision (Test): 95.3500%
+Epoca 14/50 - Perdida (Train): 0.0154 - Precision (Train): 99.6700% - Perdida (Test): 0.2015 - Precision (Test): 95.1600%
+Epoca 15/50 - Perdida (Train): 0.0127 - Precision (Train): 99.6900% - Perdida (Test): 0.2103 - Precision (Test): 95.2700%
+Epoca 16/50 - Perdida (Train): 0.0111 - Precision (Train): 99.7000% - Perdida (Test): 0.2429 - Precision (Test): 94.6600%
+Epoca 17/50 - Perdida (Train): 0.0078 - Precision (Train): 99.8700% - Perdida (Test): 0.2251 - Precision (Test): 95.1400%
+Epoca 18/50 - Perdida (Train): 0.0060 - Precision (Train): 99.8900% - Perdida (Test): 0.2369 - Precision (Test): 95.0400%
+Epoca 19/50 - Perdida (Train): 0.0058 - Precision (Train): 99.8500% - Perdida (Test): 0.2470 - Precision (Test): 94.8800%
+Epoca 20/50 - Perdida (Train): 0.0046 - Precision (Train): 99.8800% - Perdida (Test): 0.2394 - Precision (Test): 95.6100%
+Epoca 21/50 - Perdida (Train): 0.0035 - Precision (Train): 99.9200% - Perdida (Test): 0.2583 - Precision (Test): 95.4700%
+Epoca 22/50 - Perdida (Train): 0.0023 - Precision (Train): 99.9600% - Perdida (Test): 0.2860 - Precision (Test): 95.1900%
+Epoca 23/50 - Perdida (Train): 0.0023 - Precision (Train): 99.9500% - Perdida (Test): 0.2473 - Precision (Test): 95.6000%
+Epoca 24/50 - Perdida (Train): 0.0024 - Precision (Train): 99.9000% - Perdida (Test): 0.2637 - Precision (Test): 95.5000%
+Epoca 25/50 - Perdida (Train): 0.0020 - Precision (Train): 99.9100% - Perdida (Test): 0.2686 - Precision (Test): 95.7600%
+Epoca 26/50 - Perdida (Train): 0.0012 - Precision (Train): 99.9700% - Perdida (Test): 0.2884 - Precision (Test): 95.4000%
+Epoca 27/50 - Perdida (Train): 0.0007 - Precision (Train): 99.9800% - Perdida (Test): 0.2777 - Precision (Test): 95.5300%
+Epoca 28/50 - Perdida (Train): 0.0004 - Precision (Train): 100.0000% - Perdida (Test): 0.2923 - Precision (Test): 95.6400%
+Epoca 29/50 - Perdida (Train): 0.0007 - Precision (Train): 99.9900% - Perdida (Test): 0.3063 - Precision (Test): 95.5600%
+Epoca 30/50 - Perdida (Train): 0.0007 - Precision (Train): 99.9900% - Perdida (Test): 0.3050 - Precision (Test): 95.5000%
+Epoca 31/50 - Perdida (Train): 0.0008 - Precision (Train): 99.9700% - Perdida (Test): 0.3001 - Precision (Test): 95.6800%
+Epoca 32/50 - Perdida (Train): 0.0003 - Precision (Train): 99.9900% - Perdida (Test): 0.3067 - Precision (Test): 95.7700%
+Epoca 33/50 - Perdida (Train): 0.0001 - Precision (Train): 100.0000% - Perdida (Test): 0.3458 - Precision (Test): 95.5300%
+Epoca 34/50 - Perdida (Train): 0.0003 - Precision (Train): 100.0000% - Perdida (Test): 0.3381 - Precision (Test): 95.6700%
+Epoca 35/50 - Perdida (Train): 0.0005 - Precision (Train): 99.9900% - Perdida (Test): 0.3235 - Precision (Test): 95.6500%
+Epoca 36/50 - Perdida (Train): 0.0002 - Precision (Train): 100.0000% - Perdida (Test): 0.3464 - Precision (Test): 95.6400%
+Epoca 37/50 - Perdida (Train): 0.0001 - Precision (Train): 100.0000% - Perdida (Test): 0.3314 - Precision (Test): 95.6700%
+Epoca 38/50 - Perdida (Train): 0.0002 - Precision (Train): 99.9900% - Perdida (Test): 0.3711 - Precision (Test): 95.6600%
+Epoca 39/50 - Perdida (Train): 0.0001 - Precision (Train): 100.0000% - Perdida (Test): 0.3646 - Precision (Test): 95.7400%
+Epoca 40/50 - Perdida (Train): 0.0003 - Precision (Train): 99.9900% - Perdida (Test): 0.3574 - Precision (Test): 95.8200%
+Epoca 41/50 - Perdida (Train): 0.0002 - Precision (Train): 99.9900% - Perdida (Test): 0.3796 - Precision (Test): 95.6400%
+Epoca 42/50 - Perdida (Train): 0.0003 - Precision (Train): 99.9900% - Perdida (Test): 0.3645 - Precision (Test): 95.7300%
+Epoca 43/50 - Perdida (Train): 0.0001 - Precision (Train): 100.0000% - Perdida (Test): 0.3744 - Precision (Test): 95.8200%
+Epoca 44/50 - Perdida (Train): 0.0009 - Precision (Train): 99.9800% - Perdida (Test): 0.3779 - Precision (Test): 95.5500%
+Epoca 45/50 - Perdida (Train): 0.0000 - Precision (Train): 100.0000% - Perdida (Test): 0.3810 - Precision (Test): 95.6900%
+Epoca 46/50 - Perdida (Train): 0.0001 - Precision (Train): 100.0000% - Perdida (Test): 0.3896 - Precision (Test): 95.8300%
+Epoca 47/50 - Perdida (Train): 0.0000 - Precision (Train): 100.0000% - Perdida (Test): 0.4184 - Precision (Test): 95.4000%
+Epoca 48/50 - Perdida (Train): 0.0000 - Precision (Train): 100.0000% - Perdida (Test): 0.3850 - Precision (Test): 95.8700%
+Epoca 49/50 - Perdida (Train): 0.0003 - Precision (Train): 99.9900% - Perdida (Test): 0.4075 - Precision (Test): 95.5700%
+Epoca 50/50 - Perdida (Train): 0.0000 - Precision (Train): 100.0000% - Perdida (Test): 0.4190 - Precision (Test): 95.7700%
+Tiempo de entrenamiento: 165 segundos.
+Entrenamiento completado.
+Pesos del modelo guardados correctamente en: modelo_mnist_pesos_50_rmsprop.txt
+Historial de entrenamiento completo guardado correctamente en: historial_entrenamiento_50_rmsprop.txt
+
+Cargando datos de prueba para evaluacion...
+Cargadas 10000 muestras de mnist_test.csv
+
+Precision en el conjunto de prueba (10000 muestras): 95.7700% (9577/10000)
