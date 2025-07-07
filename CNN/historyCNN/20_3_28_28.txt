@@ -1,0 +1,111 @@
+❯ ./run.sh
+--- Creando directorio de compilación ---
+--- Configurando el proyecto con CMake ---
+-- Build type: Release
+-- Compiler flags: -O3 -fopenmp -Wall -Wextra -pedantic 
+-- OpenMP encontrado, enlazando...
+-- Configuración de CMake para CNN completada.
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/paul/UNSA/IA/CNN/build
+--- Compilando el proyecto (con optimización Release) ---
+[100%] Built target CNN
+--- Compilación completada ---
+--- Ejecutando la aplicación ---
+Cargando MNIST desde: data/fashion_train.csv (fracción: 100%, canales: 3)
+Carga completa. 60000 muestras cargadas.
+Forma de X: (60000, 3, 28, 28), Forma de y: (60000, 10)
+Cargando MNIST desde: data/fashion_test.csv (fracción: 100%, canales: 3)
+Carga completa. 10000 muestras cargadas.
+Forma de X: (10000, 3, 28, 28), Forma de y: (10000, 10)
+
+--- Iniciando Entrenamiento de la CNN ---
+
+Epoca  1/20 - Tiempo: 45.99s | train_loss: 1.5933 | train_acc: 0.4058 | val_loss: 0.8344 | val_acc: 0.6899
+Epoca  2/20 - Tiempo: 45.42s | train_loss: 0.7166 | train_acc: 0.7351 | val_loss: 0.6574 | val_acc: 0.7631
+Epoca  3/20 - Tiempo: 45.09s | train_loss: 0.6304 | train_acc: 0.7675 | val_loss: 0.6074 | val_acc: 0.7816
+Epoca  4/20 - Tiempo: 46.14s | train_loss: 0.5950 | train_acc: 0.7819 | val_loss: 0.5768 | val_acc: 0.7944
+Epoca  5/20 - Tiempo: 45.76s | train_loss: 0.5629 | train_acc: 0.7930 | val_loss: 0.5499 | val_acc: 0.8097
+Epoca  6/20 - Tiempo: 46.07s | train_loss: 0.5404 | train_acc: 0.8037 | val_loss: 0.5323 | val_acc: 0.8175
+Epoca  7/20 - Tiempo: 45.03s | train_loss: 0.5252 | train_acc: 0.8097 | val_loss: 0.5050 | val_acc: 0.8242
+Epoca  8/20 - Tiempo: 45.66s | train_loss: 0.5107 | train_acc: 0.8154 | val_loss: 0.4851 | val_acc: 0.8299
+Epoca  9/20 - Tiempo: 45.22s | train_loss: 0.4941 | train_acc: 0.8223 | val_loss: 0.4767 | val_acc: 0.8338
+Epoca 10/20 - Tiempo: 45.37s | train_loss: 0.4876 | train_acc: 0.8250 | val_loss: 0.4760 | val_acc: 0.8347
+Epoca 11/20 - Tiempo: 46.03s | train_loss: 0.4857 | train_acc: 0.8250 | val_loss: 0.4647 | val_acc: 0.8365
+Epoca 12/20 - Tiempo: 45.75s | train_loss: 0.4907 | train_acc: 0.8244 | val_loss: 0.4588 | val_acc: 0.8357
+Epoca 13/20 - Tiempo: 44.82s | train_loss: 0.5143 | train_acc: 0.8169 | val_loss: 0.4693 | val_acc: 0.8316
+Epoca 14/20 - Tiempo: 45.65s | train_loss: 0.5146 | train_acc: 0.8147 | val_loss: 0.4806 | val_acc: 0.8256
+Epoca 15/20 - Tiempo: 45.83s | train_loss: 0.4837 | train_acc: 0.8230 | val_loss: 0.4758 | val_acc: 0.8283
+Epoca 16/20 - Tiempo: 45.85s | train_loss: 0.4756 | train_acc: 0.8261 | val_loss: 0.4677 | val_acc: 0.8290
+Epoca 17/20 - Tiempo: 45.21s | train_loss: 0.4678 | train_acc: 0.8287 | val_loss: 0.4559 | val_acc: 0.8315
+Epoca 18/20 - Tiempo: 45.19s | train_loss: 0.4642 | train_acc: 0.8310 | val_loss: 0.4522 | val_acc: 0.8337
+Epoca 19/20 - Tiempo: 45.83s | train_loss: 0.4581 | train_acc: 0.8329 | val_loss: 0.4496 | val_acc: 0.8359
+Epoca 20/20 - Tiempo: 45.69s | train_loss: 0.4583 | train_acc: 0.8324 | val_loss: 0.4507 | val_acc: 0.8368
+
+--- Entrenamiento Finalizado ---
+
+Guardando modelo en: data/cnn_3canales_20.bin
+Modelo guardado con éxito.
+
+--- Probando la carga del modelo ---
+Cargando modelo desde: data/cnn_3canales_20.bin
+Modelo cargado con éxito.
+
+--- Evaluando modelo CARGADO en el conjunto de prueba ---
+========================================
+  Rendimiento del Modelo Cargado
+----------------------------------------
+  Perdida (Loss) en Test: 0.4507
+  Precision (Accuracy) en Test: 83.6800%
+========================================
+
+--- Visualizando y Prediciendo Muestra #6993 ---
+
+Imagen de Entrada (28x28):
+                                                        
+                                                        
+                                                        
+                              ..                        
+                              --==++++++--..            
+                            ::==##%%%%%%@@%%@@%%****%%--
+                            ::--%%######%%%%%%%%%%%%%%--
+                          ..::##%%##%%%%%%%%%%%%%%##%%::
+                          ::::%%%%%%%%%%%%%%%%%%%%##@@..
+                          --  **%%##%%%%%%%%%%######%%..
+                          ==  ##%%##%%%%%%%%%%%%####@@--
+                          --==@@%%%%%%%%%%%%%%%%%%%%%%  
+                          ++##%%%%%%%%%%%%%%%%%%####%%  
+                          ++%%##%%%%%%%%%%%%%%%%%%%%**  
+                          %%######%%%%%%%%%%%%%%##%%##  
+                        ##%%##%%%%%%##%%%%%%%%%%%%%%##  
+                      **@@##%%%%%%%%%%%%%%%%%%%%%%%%%%  
+                  ..%%%%##%%##%%%%%%%%%%%%%%%%%%%%%%%%  
+              ::**@@%%####%%##%%%%%%%%%%##%%%%%%%%%%@@  
+      ::==**%%@@%%####%%%%%%%%%%%%%%%%%%%%##%%%%%%%%%%  
+  ##%%%%%%%%######%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%##  
+--%%##########%%%%%%%%%%%%%%%%%%%%%%%%%%%%##########**  
+--##%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%##**++**********##++  
+  ::++##%%%%%%%%%%%%%%%%%%%%##++::    ..%%**####**##**  
+          ..::----====----..            ##**********++  
+                                                        
+                                                        
+                                                        
+
+----------------------------------------
+Etiqueta Real:         9
+Predicción del Modelo: 9 (CORRECTO)
+----------------------------------------
+Probabilidades de salida:
+  Clase 0: 0.00%
+  Clase 1: 0.00%
+  Clase 2: 0.00%
+  Clase 3: 0.00%
+  Clase 4: 0.00%
+  Clase 5: 0.00%
+  Clase 6: 0.00%
+  Clase 7: 0.05%
+  Clase 8: 0.00%
+  Clase 9: 99.95%
+========================================
+
+--- Ejecución finalizada ---

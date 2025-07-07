@@ -1,0 +1,10 @@
+# Ignorar directorios de construcción
+build/
+compile_commands.json 
+data/
+.cache/
+# Archivos generados por CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
